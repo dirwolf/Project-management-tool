@@ -1,0 +1,208 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+
+:root {
+    --primary-bg-color: #1e252b;
+    --secondary-bg-color: #2a343f;
+    --text-color: #ffffff;
+    --accent-color: #ff6b6b;
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    font-family: 'Raleway', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+nav {
+    background-color: var(--secondary-bg-color);
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-right: 1rem;
+    font-weight: 500;
+}
+
+
+.main-container {
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+
+.side {
+    width: 300px;
+    text-align: center;
+    background-color: var(--secondary-bg-color);
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.side .title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.side img {
+    max-width: 100%;
+}
+
+
+main {
+    width: 600px;
+    background-color: var(--secondary-bg-color);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+main .main-sub-container {
+    background: linear-gradient(145deg, #1e252b, #2a343f);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2), -5px -5px 8px rgba(0, 0, 0, 0.2);
+}
+
+main .main-sub-container .add-user-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+main .main-sub-container select {
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+main .main-sub-container .select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--secondary-bg-color);
+    color: var(--text-color);
+    pointer-events: none;
+}
+
+
+#footer {
+    background-color: var(--primary-bg-color);
+    padding: 4rem 0;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+#footer a {
+    color: var(--accent-color);
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s;
+}
+
+#footer a:hover {
+    color: var(--text-color);
+}
+
+
+#slideContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+#slideContainer #slide1,
+#slideContainer #slide2 {
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#slideContainer #slide1 {
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+#slideContainer #slide2 {
+    display: none;
+    background-color: var(--primary-bg-color);
+}
+
+
+
+#feedbackFormContainer {
+    text-align: center;
+}
+
+#feedbackFormContainer #feedback {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#feedbackFormContainer #feedback #title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#feedbackFormContainer #feedback textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+#feedbackFormContainer #feedback button {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#feedbackFormContainer #feedback button:hover {
+    background-color: #ff5252;
+    color: var(--text-color);
+}
